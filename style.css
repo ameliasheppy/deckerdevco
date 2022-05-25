@@ -132,6 +132,11 @@ li {
   margin-bottom: 60px;
   padding: 5px 10px 5px 10px;
 }
+.gitLink {
+  text-decoration: underline;
+  color: #111f4d;
+  font-weight: bolder;
+}
 #currentTemperature {
   color: yellow;
 }
