@@ -1,0 +1,150 @@
+body {
+  font-family: "Lobster", cursive;
+  background: antiquewhite;
+}
+img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+h1 {
+  display: block;
+  color: #0c056d;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 30px;
+}
+h2 {
+  text-align: center;
+  color: #0c056d;
+  font-size: 42px;
+}
+h5 {
+  color: #0c056d;
+  font-size: 30px;
+  text-align: center;
+}
+button {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: #edb7eb;
+  background-color: #0c056d;
+  border: 4 px solid white;
+  border-radius: 12px;
+  font-size: 20px;
+  padding: 12px;
+}
+button:hover {
+  color: #0c056d;
+  background-color: skyblue;
+  cursor: pointer;
+}
+p {
+  color: #0c056d;
+  font-size: 12px;
+  text-align: center;
+}
+li {
+  font-size: 16px;
+  font-weight: 100;
+  height: 19px;
+  line-height: 1px;
+  list-style: none;
+}
+.weather {
+  background-color: rgb(203, 235, 247);
+  max-width: 60%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-radius: 12px;
+  border: 2px solid white;
+}
+.scoot {
+  text-align: center;
+}
+
+.searchbar {
+  text-align: center;
+}
+.row {
+  color: #111f4d;
+  font-weight: 800;
+  text-align: center;
+}
+.weather-icon {
+  font-size: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+.temperature {
+  font-size: 64px;
+  line-height: 1;
+}
+.units {
+  position: relative;
+  top: -32px;
+  color: red;
+}
+.card {
+  margin-top: 30px;
+  border-color: #b61aae;
+  border-width: 1px;
+  background-color: #edb7eb;
+}
+.sunny-icon {
+  color: yellow;
+  font-size: 48px;
+  text-align: center;
+}
+.rainy-icon {
+  color: grey;
+  font-size: 48px;
+  text-align: center;
+}
+.card-title {
+  font-size: 28px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+.card-text {
+  font-size: 34px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+.row2 {
+  color: #111f4d;
+  font-weight: 800;
+}
+.col-3 {
+  color: #111f4d;
+  font-weight: 800;
+  font-size: 20px;
+  background-color: #f25d9c;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  margin-bottom: 60px;
+  padding: 5px 10px 5px 10px;
+}
+#currentTemperature {
+  color: yellow;
+}
+#city-form {
+  max-width: 40%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+#celsius {
+  font-size: 200px;
+}
+#fahrenheit {
+  font-size: 200px;
+}
