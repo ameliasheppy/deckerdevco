@@ -2,13 +2,6 @@ body {
   font-family: "Lobster", cursive;
   background: antiquewhite;
 }
-img {
-  width: 40%;
-  display: block;
-  margin: 0 auto;
-  border: 2px solid white;
-  border-radius: 15px;
-}
 h1 {
   display: block;
   color: #0c056d;
