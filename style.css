@@ -1,21 +1,28 @@
 body {
   font-family: "Lobster", cursive;
-  background: antiquewhite;
+  background: #e7e6e1;
+}
+img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 15px;
 }
 h1 {
   display: block;
-  color: #0c056d;
+  color: #537791;
   font-size: 60px;
   text-align: center;
   margin-top: 30px;
 }
 h2 {
   text-align: center;
-  color: #0c056d;
+  color: #537791;
   font-size: 42px;
 }
 h5 {
-  color: #0c056d;
+  color: #537791;
   font-size: 30px;
   text-align: center;
 }
@@ -23,20 +30,20 @@ button {
   text-align: center;
   display: block;
   margin: 0 auto;
-  color: #edb7eb;
-  background-color: #0c056d;
+  color: #f7f6e7;
+  background-color: #537791;
   border: 4 px solid white;
   border-radius: 12px;
   font-size: 20px;
   padding: 12px;
 }
 button:hover {
-  color: #0c056d;
+  color: #537791;
   background-color: skyblue;
   cursor: pointer;
 }
 p {
-  color: #0c056d;
+  color: #537791;
   font-size: 12px;
   text-align: center;
 }
@@ -85,7 +92,7 @@ li {
   margin-top: 30px;
   border-color: #b61aae;
   border-width: 1px;
-  background-color: #edb7eb;
+  background-color: #f7f6e7;
 }
 .sunny-icon {
   color: yellow;
@@ -117,7 +124,7 @@ li {
   color: #111f4d;
   font-weight: 800;
   font-size: 20px;
-  background-color: #f25d9c;
+  background-color: #f7f6e7;
   text-align: center;
   display: block;
   margin: 0 auto;
@@ -127,7 +134,7 @@ li {
 }
 .gitLink {
   text-decoration: underline;
-  color: #111f4d;
+  color: #537791;
   font-weight: bolder;
 }
 #currentTemperature {
