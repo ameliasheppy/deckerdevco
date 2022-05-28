@@ -90,7 +90,7 @@ li {
 }
 .card {
   margin-top: 30px;
-  border-color: #b61aae;
+  border-color: #111f4d;
   border-width: 1px;
   background-color: #f7f6e7;
 }
@@ -153,4 +153,3 @@ li {
 #fahrenheit {
   font-size: 200px;
 }
-
