@@ -18,7 +18,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours} ${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
@@ -84,7 +84,7 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-//this are the global variables down here:
+//these are the global variables down here:
 let celsiusTemperature = null;
 //by calling celsiusTemperature in the function to displayFahrenheitTemperature:
 //Instead of calling the celsius temp by a querySelector(which would multiply the temp with every call)

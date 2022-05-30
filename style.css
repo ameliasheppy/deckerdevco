@@ -1,12 +1,5 @@
 body {
   font-family: "Maitree", serif;
-
-  background: linear-gradient(
-    109.6deg,
-    rgb(17, 151, 147) 11.2%,
-    rgb(154, 214, 212) 55.4%,
-    rgb(255, 233, 171) 100.2%
-  );
 }
 h1 {
   color: black;
@@ -53,6 +46,14 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+.container {
+  background: linear-gradient(
+    109.6deg,
+    rgb(17, 151, 147) 11.2%,
+    rgb(154, 214, 212) 55.4%,
+    rgb(255, 233, 171) 100.2%
+  );
+}
 .weather {
   max-width: 60%;
   margin: 0 auto;
@@ -64,7 +65,7 @@ li:first-letter {
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px solid navy;
+  border: 1px solid black;
   border-radius: 5px;
 }
 
@@ -136,7 +137,7 @@ li:first-letter {
   top: -22px;
 }
 #temp {
-  color: blue;
+  color: black;
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
