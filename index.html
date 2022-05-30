@@ -11,6 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,102 +19,56 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/0da928acce.js"
-      crossorigin="anonymous"
-    ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="weather">
-        <h1><span id="city"></span></h1>
-        <h2>Hello!</h2>
-        <br />
-        <div class="row">
-          <div class="col-xs-6">
-            <span class="temperature" id="current-temperature">17*</span>
-          </div>
-
-          <div class="col-xs-6">
+   <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+            <input type="search" placeholder="Type a city to search" class="form-control" id="city-input" autocomplete="off"/>
+            </div>
+            <div class="col-3">
+            <input type="submit" value="Search" class="btn btn-primary" w-100/>
+            </div>
+          </form>
+          <div class="overview">
+            <h3 id="city"></h3>
             <ul>
-              <li span id="humidity">%</li>
-              <li span id="wind"></li>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
             </ul>
           </div>
-        </div>
       </div>
-      <br />
-      <hr />
-      <br />
-      <h3 class="searchbar">Search here for your curent local forecast</h3>
       <div class="row">
-        <div class="col-4">
-          <form id="city-form">
-            <input
-              type="search"
-              class="form-control search"
-              placeholder="s e a r c h"
-              id="city-search"
-            />
-          </form>
-        </div>
-
-        <div class="col-4">
-          <button id="get-the-weather">Search a city</button>
-        </div>
-        <div class="col-4">
-          <button id="current-location-button">Current</button>
-        </div>
-      </div>
-      <br />
-      <video width="320" height="240" controls>
-        <source src="Video Of Morning Sunshine.mp4" type="video/mp4" />
-      </video>
-
-      <div class="card-group">
-        <div class="card">
-          <i class="fa-solid fa-sun sunny-icon"></i>
-          <div class="card-body">
-            <h5 class="card-title">Today</h5>
-            <p class="card-text">71/49</p>
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+               <img src=""
+               alt=""
+               id="icon"
+               class="float-left"
+               />
+              </div>
+               <div class="float-left">
+                <strong> <span id="temp">12</span></strong
+                ><span id="units">  <a href="#" id="celsius-link" class="active">*C</a>  | <a href="#" id="fahrenheit-link">*F</a> </span>
+              </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span></li>
+                <li>Wind: <span id="wind"></span></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <i class="fa-solid fa-sun sunny-icon"></i>
-          <div class="card-body">
-            <h5 class="card-title">Thursday</h5>
-            <p class="card-text">68/41</p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fa-solid fa-cloud-sun-rain rainy-icon"></i>
-          <div class="card-body">
-            <h5 class="card-title">Friday</h5>
-            <p class="card-text">59/29</p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fa-solid fa-cloud-sun-rain rainy-icon"></i>
-          <div class="card-body">
-            <h5 class="card-title">Saturday</h5>
-            <p class="card-text">63/47</p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fa-solid fa-sun sunny-icon"></i>
-          <div class="card-body">
-            <h5 class="card-title">Sunday</h5>
-            <p class="card-text">70/56</p>
           </div>
         </div>
       </div>
-    </div>
-    <br />
-    <hr />
-    <br />
-    <p>
       <a href="https://github.com/ameliasheppy/deckerdevco">
         <span id="gitLink">Open Source Code</span></a
       >
