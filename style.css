@@ -116,25 +116,8 @@ li:first-letter {
   margin: 0 auto;
   border-radius: 12px;
 }
-
-#launch-list {
-  color: black;
-  background-color: lightpink;
-  font-size: 24px;
-  display: block;
-  margin: 0 auto;
-  text-align: right;
-}
 .overview {
   margin-bottom: 20px;
-}
-#weather-icon {
-  color: yellow;
-  margin-right: 10px;
-  height: 64px;
-  width: 64px;
-  position: relative;
-  top: -22px;
 }
 #temp {
   color: black;
