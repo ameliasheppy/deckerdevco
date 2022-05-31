@@ -77,10 +77,10 @@ li:first-letter {
   font-weight: 800;
   text-align: center;
 }
-.weather-icon {
-  font-size: 64px;
-  height: 64px;
+#icon {
+  font-size: 80px;
   margin-right: 10px;
+  margin-top: -30px;
 }
 .temperature {
   font-size: 64px;
@@ -131,4 +131,19 @@ li:first-letter {
 }
 #units .active:hover {
   text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
 }
