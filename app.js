@@ -20,6 +20,41 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  //we need to CAREFULLy populate this var with the right content for the forecast
+  let forecastHTML = `<div class = "row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2">
+            <div class="weather-forecast-date">${day}</div>
+            <img src="#" alt="" width="42"/>
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-temperature-max"> 18*</span>
+              <span class="weather-forecast-temperature-min"> 12* </span>
+            </div>
+          </div>
+        
+`;
+  });
+
+  // do a concatenation!
+  //leave the string empty. js will read it as, hey, leave the string empty and make it below
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+
+  //remember! innerHTML accepts HTML, so c/p the
+  //HTML code that we need to duplicate for our forecast in here:
+
+  //okay, so it's injected once, now how do I duplicate this?!
+  //do not c/p! It will not append it on. It will just replace what is there.
+  //use a loop! make a new var above to store the HTML of the forecast.
+}
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temp");
@@ -103,5 +138,5 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 //it is best to call the search functions at the bottom. Find out why.
 search("New York");
-
+displayForecast();
 //It is good to put the functions at the top and then call them at the bottom
