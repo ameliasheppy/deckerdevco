@@ -35,7 +35,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class = "row">`;
-  days.forEach(function (forecastDay, index) {
+  forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
@@ -43,9 +43,9 @@ function displayForecast(response) {
           <div class="col-2">
             <div class="weather-forecast-date">${formatDay(
               forecastDay.dt
-            )}}</div>
+            )}</div>
             <img src="http://openweathermap.org/img/wn/${
-              forecast.weather[0].icon
+              forecastDay.weather[0].icon
             }@2x.png" alt="" width="42"/>
             <div class="weather-forecast-temperature">
               <span class="weather-forecast-temperature-max"> ${Math.round(
@@ -66,18 +66,17 @@ function displayForecast(response) {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-
-  //remember! innerHTML accepts HTML, so c/p the
-  //HTML code that we need to duplicate for our forecast in here:
-
-  //okay, so it's injected once, now how do I duplicate this?!
-  //do not c/p! It will not append it on. It will just replace what is there.
-  //use a loop! make a new var above to store the HTML of the forecast.
 }
+//remember! innerHTML accepts HTML, so c/p the
+//HTML code that we need to duplicate for our forecast in here:
+
+//okay, so it's injected once, now how do I duplicate this?!
+//do not c/p! It will not append it on. It will just replace what is there.
+//use a loop! make a new var above to store the HTML of the forecast.
 
 function getForecast(coordinates) {
   let apiKey = "0aa51f2ae72d62c67ab574237edb123f";
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
@@ -117,7 +116,7 @@ function displayTemperature(response) {
 
 function search(city) {
   let apiKey = "0aa51f2ae72d62c67ab574237edb123f";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -128,27 +127,8 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  //this will remove the active class from the F link when it is clicked
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  //this will alter the active link on the units to change from c to f
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 //these are the global variables down here:
-let celsiusTemperature = null;
+
 //by calling celsiusTemperature in the function to displayFahrenheitTemperature:
 //Instead of calling the celsius temp by a querySelector(which would multiply the temp with every call)
 //This way, when the function runs as it is written this way, it will multiply the current
@@ -157,12 +137,6 @@ let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 //it is best to call the search functions at the bottom. Find out why.
 search("New York");
