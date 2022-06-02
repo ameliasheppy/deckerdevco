@@ -143,14 +143,18 @@ search("Columbus");
 //It is good to put the functions at the top and then call them at the bottom
 
 let IMAGE_URLS = {
-  morning: "https://www.pexels.com/photo/clouds-during-day-97558/",
+  morning:
+    "https://images.pexels.com/photos/97558/pexels-photo-97558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   night:
-    "https://www.pexels.com/photo/starry-night-sky-over-starry-night-3222255/",
+    "https://images.pexels.com/photos/3222255/pexels-photo-3222255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 };
 let setBackground = (image) => {
-  document.body.style.background = "url(`${IMAGE_URLS}`)";
+  document.body.style.backgroundImage = `url("${IMAGE_URLS[image]}")`;
 };
-if ((hours = 07 - 20)) {
+let now = new Date();
+let hours = now.getHours();
+
+if (hours >= 07 && hours < 20) {
   setBackground("morning");
 } else {
   setBackground("night");
