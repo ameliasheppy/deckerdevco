@@ -139,5 +139,5 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 //it is best to call the search functions at the bottom. Find out why.
-search("New York");
+search("Columbus");
 //It is good to put the functions at the top and then call them at the bottom
