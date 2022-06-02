@@ -141,3 +141,17 @@ form.addEventListener("submit", handleSubmit);
 //it is best to call the search functions at the bottom. Find out why.
 search("Columbus");
 //It is good to put the functions at the top and then call them at the bottom
+
+let IMAGE_URLS = {
+  morning: "https://www.pexels.com/photo/clouds-during-day-97558/",
+  night:
+    "https://www.pexels.com/photo/starry-night-sky-over-starry-night-3222255/",
+};
+let setBackground = (image) => {
+  document.body.style.background = "url(`${IMAGE_URLS}`)";
+};
+if ((hours = 07 - 20)) {
+  setBackground("morning");
+} else {
+  setBackground("night");
+}
